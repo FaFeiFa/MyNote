@@ -1,0 +1,14 @@
+[unit]
+Description=nginx -web serverAfter=network.target remote-fs.target nss-]ookup.target
+[service]
+Type=forking
+PIDFile=/usr/1ocal/nginx/1ogs/nginx.pid
+Execstartpre=/usr/1ocal/nginx/sbin/nginx -t -c/usr/1oca1/nginx/conf/nginx.conf
+ExecStart=/usr/1ocal/nginx/sbin/nginx -c /usr/1ocal/nginx/conf/nginx.conf
+ExecReload=/usr/1oca1/nginx/sbin/nginx -s reload
+Execstop=/usr/1oca1/nginx/sbin/nginx -s stop
+ExecQuit=/usr/1oca1/nginx/sbin/nginx -s quit
+PrivateTmp=true
+
+[Install]
+wantedBy=multi-user.target
