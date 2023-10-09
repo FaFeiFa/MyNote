@@ -14,5 +14,14 @@ git config --global user.email
 
 C:\Users\Hua\.gitconfig
 
+3.设置ssh免密登陆
 
+删除文件夹`C:\Users\用户\.ssh`
 
+在`C:\Users\用户`下打开git输入
+
+```git
+ssh-keygen -t rsa -C 邮箱
+```
+
+将`C:\Users\用户\.ssh`下的`id_rsa.pub`文件复制并添加到github账户下
